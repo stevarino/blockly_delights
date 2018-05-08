@@ -1,0 +1,28 @@
+{
+  "name": "BlocklyBotCraft",
+  "version": "0.1.0",
+  "description": "Blockly Bot Craft - STEM education resource using Blockly programming IDE and Minecraft Bots",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "commander": "^2.15.1",
+    "express": "^4.16.3",
+    "mineflayer": "^2.6.1",
+    "mineflayer-navigate": "0.0.10",
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevarino/blockly_bot_craft.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevarino/blockly_bot_craft/issues"
+  },
+  "homepage": "https://github.com/stevarino/blockly_bot_craft#readme"
+}
