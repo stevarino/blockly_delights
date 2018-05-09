@@ -717,6 +717,64 @@ BLOCKS = {
     },
     fields: ['op'],
     values: ['left', 'right']
+  },
+
+  comp: {
+    init: function () {
+      this.appendValueInput("left")
+        .setCheck(null);
+      this.appendValueInput("right")
+        .setCheck(null)
+        .appendField(new Blockly.FieldDropdown([
+          ["=", "eq"],
+          [">", "gt"],
+          ["<", "lt"],
+          ["≥", "gte"],
+          ["≤", "lte"],
+          ["!=", "neq"]
+        ]), "op");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(230);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    },
+    fields: ['op'],
+    values: ['left', 'right']
+  },
+
+  logic: {
+    init: function () {
+      this.appendValueInput("left")
+        .setCheck(null);
+      this.appendValueInput("right")
+        .setCheck(null)
+        .appendField(new Blockly.FieldDropdown([
+          ["and", "and"],
+          ["or", "or"]
+        ]), "op");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(230);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    },
+    fields: ['op'],
+    values: ['left', 'right']
+  },
+
+  not: {
+    init: function () {
+      this.appendValueInput("val")
+        .appendField("Not")
+        .setCheck(null);
+      this.setOutput(true, null);
+      this.setColour(230);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    },
+    fields: ['op'],
+    values: ['left', 'right']
   }
 };
 

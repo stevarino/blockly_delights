@@ -65,7 +65,34 @@
   <div id="blocklyDiv" style="position: absolute"></div>
 
   <xml id="toolbox" style="display: none">
-    <category name='Minecraft'>
+    <category name='Start'>
+      <block type="start"></block>
+      <block type="jump"></block>
+      <block type="move"></block>
+      <block type="loop"></block>
+      <block type="rotate">
+        <value name='val'>
+          <shadow type="num">
+            <field name='val'>90</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="delay">
+        <value name='val'>
+          <shadow type="num">
+            <field name='val'>1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="speak">
+        <value name='val'>
+          <shadow type="str">
+            <field name='val'>Hello</value>
+        </shadow>
+        </value>
+      </block>
+    </category>
+    <category name='Bot'>
       <block type="speak">
         <value name='val'>
           <shadow type="str">
@@ -101,43 +128,45 @@
       </block>
     </category>
     <category name='Programming'>
+      <label text='Functions'></label>
       <block type="start"></block>
-      <block type="function"></block>
+      <block type="dynamic_function"></block>
       <block type="return"></block>
-      <block type="argument"></block>
-      <block type="call"></block>
-      <block type="call_inline"></block>
-      <block type="log"></block>
-      <block type="loop"></block>
-      <block type="while"></block>
+      <block type="dynamic_call"></block>
+      <block type="dynamic_call_inline"></block>
+      <label text="Conditionals"></label>
       <block type="if"></block>
       <block type="if_else"></block>
+      <label text="Loops"></label>
+      <block type="loop"></block>
+      <block type="while"></block>
+      <label text="Operations"></label>
+      <block type="math_op"></block>
+      <block type="comp"></block>
+      <block type="logic"></block>
+      <block type="not"></block>
+      <block type="log"></block>
     </category>>
     <category name='Data'>
-        <block type="get"></block>
-        <block type="assign"></block>
-        <block type="global_get"></block>
-        <block type="global_assign"></block>
+      <block type="get"></block>
+      <block type="assign"></block>
+      <block type="global_get"></block>
+      <block type="global_assign"></block>
 
-        <label text="Values"></label>
-        <block type='const'></block>
-        <block type="num"></block>
-        <block type="str"></block>
-        <block type="to_string"></block>
-        <block type="to_number"></block>
+      <label text="Values"></label>
+      <block type='const'></block>
+      <block type="num"></block>
+      <block type="str"></block>
+      <block type="to_string"></block>
+      <block type="to_number"></block>
 
-        <label text="Lists"></label>
-        <block type="list"></block>
-        <block type="list_push"></block>
-        <block type="list_pop"></block>
+      <label text="Lists"></label>
+      <block type="list"></block>
+      <block type="list_push"></block>
+      <block type="list_pop"></block>
 
     </category>
     <category name='Uncategorized'>
-      <block type="math_op"></block>
-      <block type="lists_create_with"></block>
-      <block type="dynamic_call"></block>
-      <block type="dynamic_call_inline"></block>
-      <block type="dynamic_function"></block>
     </category>
   </xml>
   <script src="/static/blocks.js"></script>
