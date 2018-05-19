@@ -1,5 +1,5 @@
 
-var VALUES = ["Boolean", "Number", "String", "Array", "Value", "Null"]
+var VALUES = ["Boolean", "Number", "String", "Array", "Value", "Null"];
 
 function inject_code(name, fields, values, blocks) {
   /**
@@ -507,7 +507,7 @@ BLOCKS = {
   loop: {
     init: function () {
       this.appendDummyInput()
-        .appendField("Loop");
+        .appendField("Repeat forever");
       this.appendStatementInput("statements")
         .setCheck(VALUES);
       this.setColour(270);

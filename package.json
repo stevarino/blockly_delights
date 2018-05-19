@@ -7,9 +7,14 @@
     "body-parser": "^1.18.2",
     "commander": "^2.15.1",
     "express": "^4.16.3",
+    "extract-zip": "^1.6.6",
+    "minecraft-wrap": "^1.1.8",
     "mineflayer": "^2.6.1",
     "mineflayer-navigate": "0.0.10",
-    "npm": "^5.8.0"
+    "node-zip": "^1.1.1",
+    "npm": "^5.8.0",
+    "prismarine-nbt": "^1.2.0",
+    "prismarine-provider-anvil": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -9,7 +9,7 @@ Blockly.Blocks.dynamic_call = {
     this.length_ = 0;
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.updateShape_()
+    this.updateShape_();
     this.setColour(75);
   },
 
@@ -51,9 +51,9 @@ Blockly.Blocks.dynamic_call = {
   },
 
   setFirstField: function (field) {
-    field.appendField(new Blockly.FieldImage("/static/img/plus_white.png", 15, 15, "+"))
-    field.appendField(new Blockly.FieldImage("/static/img/minus_white.png", 15, 15, "-"))
-    field.appendField("Call function")
+    field.appendField(new Blockly.FieldImage("/static/img/plus_white.png", 15, 15, "+"));
+    field.appendField(new Blockly.FieldImage("/static/img/minus_white.png", 15, 15, "-"));
+    field.appendField("Call function");
     field.appendField(new Blockly.FieldTextInput(this.name_), "name");
   },
 
@@ -121,5 +121,5 @@ Blockly.JavaScript.dynamic_call = function (block) {
     obj.args.push(value_to_obj(block, "ADD" + i));
   }
   return blockobj_to_json('call', block, obj);
-}
+};
 
