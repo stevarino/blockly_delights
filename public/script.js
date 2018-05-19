@@ -113,6 +113,31 @@ document.getElementById("upload").addEventListener(
     'click', () => { upload_code(0) }, false);
 document.getElementById("upload_and_exec").addEventListener(
     'click', () => { upload_code(1) }, false);
+document.getElementById("reset").addEventListener(
+    'click', () => {
+        if (confirm("Are you sure?")) {
+            post_json('/reset', '{}');
+        }
+    }, false);
+
+window.setInterval(
+    () => {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                var status = JSON.parse(xhr.responseText);
+                var text = "Server is Offline";
+                if (status.server) {
+                    text = "Server is Online";
+                }
+                document.getElementById("server_status").textContent = text;
+            }
+        }
+        xhr.open('GET', '/status', true);
+        xhr.send(null);
+    },
+    100
+)
 
 var workspace_xml = window.localStorage.getItem('workspace')
 if (workspace_xml) {

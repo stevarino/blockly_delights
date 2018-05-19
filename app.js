@@ -40,7 +40,7 @@ app.get('/status', function(req, res) {
   }));
 });
 
-app.get('/reset', function (req, res) {
+app.post('/reset', function (req, res) {
   mc_server.reset().then(function() {
     res.send('okay');
   });
